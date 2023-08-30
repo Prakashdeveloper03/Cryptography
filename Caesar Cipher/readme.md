@@ -13,22 +13,20 @@ To decrypt the message, you simply shift each letter back key positions in the a
 The Caesar Cipher can be implemented in any programming language that supports string manipulation. Here's a implementation in Go programming language:
 
 ```go
-func encrypt(plaintext string, shift int) string {
-    var ciphertext string
-    for _, c := range plaintext {
-        if c >= 'a' && c <= 'z' {
-            ciphertext += string('a' + (c - 'a' + rune(shift)) % 26)
-        } else if c >= 'A' && c <= 'Z' {
-            ciphertext += string('A' + (c - 'A' + rune(shift)) % 26)
+func caesarCipher(text string, shift int) string {
+    var result strings.Builder
+    for _, char := range text {
+        if char >= 'a' && char <= 'z' {
+            encrypted := 'a' + (char-'a'+rune(shift))%26
+            result.WriteRune(encrypted)
+        } else if char >= 'A' && char <= 'Z' {
+            encrypted := 'A' + (char-'A'+rune(shift))%26
+            result.WriteRune(encrypted)
         } else {
-            ciphertext += string(c)
+            result.WriteRune(char)
         }
     }
-    return ciphertext
-}
-
-func decrypt(ciphertext string, shift int) string {
-    return encrypt(ciphertext, 26 - shift)
+    return result.String()
 }
 ```
 
