@@ -10,23 +10,23 @@ To decrypt the message, you simply shift each letter back key positions in the a
 
 ## Implementation
 
-The Caesar Cipher can be implemented in any programming language that supports string manipulation. Here's a implementation in Go programming language:
+The Caesar Cipher can be implemented in any programming language that supports string manipulation. Here's a implementation in Java programming language:
 
-```go
-func caesarCipher(text string, shift int) string {
-    var result strings.Builder
-    for _, char := range text {
-        if char >= 'a' && char <= 'z' {
-            encrypted := 'a' + (char-'a'+rune(shift))%26
-            result.WriteRune(encrypted)
-        } else if char >= 'A' && char <= 'Z' {
-            encrypted := 'A' + (char-'A'+rune(shift))%26
-            result.WriteRune(encrypted)
+```java
+public static String caesarCipher(String text, int shift) {
+    StringBuilder result = new StringBuilder();
+    for (char character : text.toCharArray()) {
+        if (character >= 'a' && character <= 'z') {
+            char encrypted = (char) ('a' + (character - 'a' + shift) % 26);
+            result.append(encrypted);
+        } else if (character >= 'A' && character <= 'Z') {
+            char encrypted = (char) ('A' + (character - 'A' + shift) % 26);
+            result.append(encrypted);
         } else {
-            result.WriteRune(char)
+            result.append(character);
         }
     }
-    return result.String()
+    return result.toString();
 }
 ```
 

@@ -1,13 +1,13 @@
 # Cryptography
-![made-with-Go](https://img.shields.io/badge/Made%20with-Go-0078D4.svg)
+![made-with-Java](https://img.shields.io/badge/Made%20with-Java-0078D4.svg)
 ![terminal](https://img.shields.io/badge/Windows%20Terminal-4D4D4D?logo=windows%20terminal&logoColor=white)
 ![vscode](https://img.shields.io/badge/Visual_Studio_Code-0078D4?logo=visual%20studio%20code&logoColor=white)
 
-This repository contains implementation of various cryptography algorithms in go programming language.
+This repository contains source code for my MCA 3rd semester source code for cypersecurity lab in Java programming language.
 
 ## Prerequisites
 Before you can run this project, you need to have the following installed:
-- Go (version 1.20.3 or later)
+- Java (version 11 or later)
 
 ## Installation
 Clone the repository using `git`
@@ -20,5 +20,5 @@ cd <directory_name>
 ```
 Then, Run the any algorithm
 ```
-go run <algorithm>/<file_name>.go
+java <algorithm>/<file_name>.go
 ```
