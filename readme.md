@@ -20,5 +20,5 @@ cd <directory_name>
 ```
 Then, Run the any algorithm
 ```
-java <algorithm>/<file_name>.go
+java <algorithm>/<file_name>.java
 ```
